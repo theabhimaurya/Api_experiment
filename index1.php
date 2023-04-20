@@ -9,11 +9,9 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
-
-$value1 = $_POST['name'] ;
-$value2 = $_POST['mobile'] ;
-$value3 = $_POST['email'] ;
+$value1 = "John";
+$value2 = "Doe";
+$value3 = "john@example.com";
 
 $sql = "INSERT INTO personal_data (name, mobile, email) VALUES ('$value1', '$value2', '$value3')";
 
@@ -22,6 +20,8 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+
+//http://localhost/project/cites.php?
 
 mysqli_close($conn);
 ?>

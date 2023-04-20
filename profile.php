@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uniqueFileName = uniqid() . '_' . $fileName;
     
     // Specify the upload directory and file path
-    $uploadDir = '/uploads/';
+    $uploadDir = './uploads/';
     $uploadFilePath = $uploadDir . $uniqueFileName;
     
     // Move the file from the temporary directory to the upload directory
